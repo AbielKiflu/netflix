@@ -1,5 +1,5 @@
 <template>
-    <div class="service" v-for="service in servicesState" :key="service.id" :class="{even:id%2==0, odd:id%2==1}">
+    <div class="service" v-for="service in servicesState" :key="service.id" :class="{even:service.id%2==0, odd:service.id%2==1}">
     <div class="detail" >
         <h1>{{ service.title}}</h1>
         <h2>{{ service.description }}</h2>
@@ -8,16 +8,12 @@
         <img :src="require(`@/assets/${service.image}`)" alt="Picture">
     </div>
  </div>
- 
-  
 </template>
 
 
 <script setup>
    import {reactive} from 'vue';
-
  
-
 const services=[{
   id:1,
   title:"Enjoy on your TV",
@@ -80,11 +76,8 @@ const servicesState=reactive(services);
     img{
         object-fit: contain;
         max-width: 25rem;
-        height:auto;
-        
+        height:auto;       
     }
  
  
-
-
 </style>
