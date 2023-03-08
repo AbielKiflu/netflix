@@ -7,25 +7,25 @@
                 <ButtonItem text="Sign In"/>
             </div>
         </nav>
-        <section class="header">
+        <div class="header">
 
         <h1>
             Unlimited movies, TV shows, and more.
         </h1>
 
-        <h3>
+        <h2>
             Watch anywhere. Cancel anytime.
-        </h3>
+        </h2>
 
         <p>
             Ready to watch? Enter your email to create or restart your membership.
         </p>
 
         <CallActionItem/>
-       
-        </section>
-        <h1>Hi there</h1>
+        </div>
      </header>
+     <FAQ/>
+     <Footer/>
 </template>
 
 
@@ -33,6 +33,8 @@
     import ButtonItem from "@/components/button/ButtonItem";
     import DropdownItem from "@/components/dropdown/DropdownItem";
     import CallActionItem from "@/components/CallActionItem";
+    import FAQ from '@/components/FAQ.vue';
+    import Footer from '@/components/Footer.vue';
 </script>
 
 
@@ -63,7 +65,6 @@
         background-position: center center;
         background-size: cover;
         height: 50vh;
-        outline: 1px solid red;
         color: white;
         display: flex;
         flex-direction: column;
@@ -71,18 +72,30 @@
         align-items: center;
         gap: 1rem;
         
-        h1,h3,p{
-            font-family: Arial, sans-serif;
+        h1,h2,p{
             text-align: center;
-            padding:0  0.5rem;
         }
- 
+         
     }
 
 
     @media screen and (min-width: 600px) {
         .header{
             height: 100vh;
+
+            
+
+            h1{
+                font-size: 2.8rem;
+            }
+            h2{
+                font-size: 2rem;
+            }
+
+            p{
+                font-size: 1.3rem;
+            }
+
         }
 
  
