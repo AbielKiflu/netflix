@@ -66,7 +66,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        height: 50vh;
+        height: 60vh;
         color: white;
         display: flex;
         flex-direction: column;
@@ -83,7 +83,7 @@
 
     @media screen and (min-width: 600px) {
         .header{
-            height: 100vh;
+            height: 80vh;
 
             
 
