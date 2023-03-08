@@ -41,8 +41,13 @@
     const faqState=reactive(faqdata);
 
     const toggle=(id)=>{
-        alert(id)
-        //faqState.filter(id=>{})
+        
+        faqState.filter(item=>{
+            item.isOpen = false;
+            if(item.id==id){
+                item.isOpen = !item.isOpen
+            }
+        })
     }
  
 </script>
@@ -73,7 +78,6 @@
         gap: 0.5rem;
         margin: auto;
         max-width: 780px;
-       
         
         .title{
             display: flex;
@@ -90,6 +94,13 @@
                 outline: transparent;
                 font-size: 1.2rem;
             }
+        }
+
+        .detail{
+            border-top: 0.2rem solid black;
+            background-color:var(--gray-color);
+            color: var(--light-color);
+            padding: 1rem;
         }
 
     }
