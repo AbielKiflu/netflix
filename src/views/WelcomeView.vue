@@ -24,6 +24,7 @@
         <CallActionItem/>
         </div>
      </header>
+     <ServiceItem/>
      <FAQ/>
      <Footer/>
 </template>
@@ -35,6 +36,7 @@
     import CallActionItem from "@/components/CallActionItem";
     import FAQ from '@/components/FAQ.vue';
     import Footer from '@/components/Footer.vue';
+    import ServiceItem from '@/components/ServiceItem.vue';
 </script>
 
 

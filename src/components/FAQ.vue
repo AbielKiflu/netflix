@@ -1,6 +1,6 @@
 <script setup>
  import {reactive} from 'vue';
-
+ 
  
  
  
@@ -47,6 +47,7 @@
             if(item.id==id){
                 item.isOpen = !item.isOpen
             }
+            
         })
     }
  
@@ -54,29 +55,45 @@
 
 <template>
     <div class="wrapper">
+        <h1>Frequently Asked Questions</h1>
         <ul class="faq">
             <li v-for="faq in faqState" :key="faq.id" >
                <div class="title">
                <h2> {{ faq.question }}</h2>
-               <button  @click="()=>toggle(faq.id)">X</button>
+               <button  @click="()=>toggle(faq.id)">  X</button>
                </div>
                <div class="detail" v-if="faq.isOpen">
                 {{ faq.answer  }}
                </div>
             </li>
         </ul>
+       
+        <h3>
+            Ready to watch? Enter your email to create or restart your membership
+        </h3>
+     
     </div>
 </template>
 
 
 <style lang="scss" scoped>
- 
+    .wrapper {
+        border-top: 0.5rem solid var(--gray-color);
+        padding: 1rem 0;
+        h1,h3{
+            color: white;
+            text-align: center;
+        }
+
+    }
     .faq{
+       
         display: flex;
         flex-direction: column;
         list-style-type: none;
         gap: 0.5rem;
         margin: auto;
+        padding: 1rem ;
         max-width: 780px;
         
         .title{

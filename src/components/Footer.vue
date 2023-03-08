@@ -49,7 +49,7 @@
     <style  lang="scss" scoped>
     .wrapper {
         padding: 1rem;
-        //border-top: 0.5rem solid var(--gray-color);
+        border-top: 0.5rem solid var(--gray-color);
     }
     footer{
         margin: 0.5rem auto;
