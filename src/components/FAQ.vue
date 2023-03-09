@@ -60,7 +60,7 @@
             <li v-for="faq in faqState" :key="faq.id" >
                <div class="title">
                <h2> {{ faq.question }}</h2>
-               <button  @click="()=>toggle(faq.id)">  X</button>
+               <button  @click="()=>toggle(faq.id)"> {{ faq.isOpen?"X":"+" }}</button>
                </div>
                <div class="detail" v-if="faq.isOpen">
                 {{ faq.answer  }}
@@ -109,6 +109,7 @@
                 border: none;
                 color: white;
                 outline: transparent;
+                padding: 0.5rem;
                 font-size: 1.2rem;
             }
         }

@@ -67,6 +67,7 @@
         background-position: center center;
         background-size: cover;
         height: 60vh;
+        width: 100%;
         color: white;
         display: flex;
         flex-direction: column;

@@ -18,7 +18,7 @@
     .wrapper {
         display: flex;
         flex-wrap: wrap;
-        widows: 100%;
+       
     }
 
     .input-control{
@@ -26,13 +26,13 @@
         color: black;
         appearance: none;
         border: none;
+        margin: auto;
         height: 3rem;
         
         input[type="email"] {
             appearance: none;
             border: none;
             outline: transparent;
-            width: 100%;
             height: 100%;
             padding: .5rem;
             font-size: 1rem;
