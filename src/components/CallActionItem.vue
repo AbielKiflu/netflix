@@ -18,7 +18,7 @@
     .wrapper {
         display: flex;
         flex-wrap: wrap;
-       
+      
     }
 
     .input-control{

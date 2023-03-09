@@ -83,20 +83,23 @@
 
 
     @media screen and (min-width: 600px) {
+        .menu {
+            .menu-logo{
+            width: 10rem;
+        }
+        }
         .header{
             height: 80vh;
-
-            
-
+ 
             h1{
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
             h2{
-                font-size: 2rem;
+                font-size: 2.4rem;
             }
 
             p{
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
 
         }
