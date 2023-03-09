@@ -4,7 +4,7 @@
             <img class="menu-logo" :src="require('@/assets/logo.png')" alt="logo">
             <div class="menu-action">
                 <DropdownItem/>
-                <ButtonItem text="Sign In"/>
+                <RouterLink to="/login"><ButtonItem text="Sign In"/></RouterLink>
             </div>
         </nav>
         <div class="header">
@@ -37,6 +37,9 @@
     import FAQ from '@/components/FAQ.vue';
     import Footer from '@/components/Footer.vue';
     import ServiceItem from '@/components/ServiceItem.vue';
+    import { RouterLink } from "vue-router"
+
+    
 </script>
 
 

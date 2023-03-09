@@ -1,9 +1,10 @@
 <template>
-   <WelcomeView/>
+   <RouterView/>
 </template>
 
 <script setup>
- import WelcomeView from './views/WelcomeView.vue';
+ //import WelcomeView from './views/WelcomeView.vue';
+ import { RouterView } from "vue-router";
 </script>
 
 <style lang="scss">
