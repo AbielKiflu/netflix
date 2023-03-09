@@ -43,9 +43,13 @@
     const toggle=(id)=>{
         
         faqState.filter(item=>{
-            item.isOpen = false;
             if(item.id==id){
-                item.isOpen = !item.isOpen
+                if(item.isOpen)
+                item.isOpen = false;
+                else
+                item.isOpen = true;
+            }else{
+                item.isOpen =false; 
             }
             
         })
