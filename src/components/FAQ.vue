@@ -1,10 +1,6 @@
 <script setup>
  import {reactive} from 'vue';
  
- 
- 
- 
-
  const faqdata =[
     {
         id:1,
