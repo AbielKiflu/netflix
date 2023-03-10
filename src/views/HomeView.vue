@@ -10,7 +10,6 @@
 <script setup>
    import { watchPostEffect,ref } from 'vue';
    import reqests from "@/api/request";
-   import instance from '@/api/';
    import useMovieStore from "@/store/movie";
    import { storeToRefs } from 'pinia';
 
@@ -23,9 +22,10 @@
    const moviesTopRated=ref([]);
 
    const fetchMovie=async (path)=>{
+      
       try {
-         const response = await instance.get(path);
-         return await response.json()
+   const response = await fetch(path)
+      return await response.json()
  
    } catch (error) {
       return error.json()
