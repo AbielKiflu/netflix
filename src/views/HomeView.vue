@@ -3,7 +3,7 @@
     <CardItem :movies="moviesPopular" header="Popular"/>
     <CardItem :movies="movieUpcoming" header="Upcomming"/>
     <CardItem :movies="moviesTopRated" header="Top Rated"/>
-   
+    <Footer/>
 </template>
 
 
@@ -13,6 +13,7 @@
    import useMovieStore from "@/store/movie";
    import { storeToRefs } from 'pinia';
 
+   import Footer from '@/components/Footer.vue';
    import CardItem from "@/components/card/CardItem";
    
    const {movie}=storeToRefs(useMovieStore());
