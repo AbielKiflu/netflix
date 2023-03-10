@@ -8,7 +8,7 @@
     <article class="formlogin">
         
         <form action="">
-            <h2>Sign In</h2>
+            <h2>Sign In{{ state + "tet" }}</h2>
             <div class="control">
                 <input class="field" id="email" required type="email">
                 <label for="email">Email Address</label>
@@ -47,7 +47,13 @@
 
 
 <script setup>
-  import ButtonItem from "@/components/button/ButtonItem";
+    import {ref} from 'vue';
+    import ButtonItem from "@/components/button/ButtonItem";
+
+    const state =ref(process?.env?.VUE_APP_FB_PRO);
+
+   
+
 </script>
 
 
