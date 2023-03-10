@@ -1,5 +1,5 @@
 const apiKey=process.env.VUE_APP_NETFLIX_API;
-const url="http://api.themoviedb.org/3";
+const url="https://api.themoviedb.org/3";
 
  
 const requests={
