@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
         <div class="input-control">
-            <input  id="email" type="email" >
-            <span>Email Address</span>
+            <input class="field" id="email" required type="email" >
+            <label for="email">Email Address</label>
         </div>
         <ButtonItem text="Get Started"/>
     </div>
@@ -28,25 +28,32 @@
         border: none;
         margin: auto;
         height: 3rem;
+        display: flex;
         
-        input[type="email"] {
+        .field {
             appearance: none;
             border: none;
             outline: transparent;
-            height: 100%;
             padding: .5rem;
-            font-size: 1rem;
-            &:focus ~ span{
-                transform: translateY(-80%);
+
+            &:focus ~ label{
+                top: 20%;
                 font-size: 0.8rem;
              }
+
+            &:valid{
+                top: 20%;
+                font-size: 0.8rem;
             }
-        span{
+
+            }
+            label{
             position: absolute;
             pointer-events: none;
             color: gray;
-            top: 25%;
-            left: 3%;
+            top: 50%;
+            left: 0.5rem;
+            transform: translateY(-50%);
             transition: 0.5s ease;
            
         }
