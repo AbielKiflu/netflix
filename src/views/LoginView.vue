@@ -64,7 +64,7 @@ const {setLoginState}=useLoginStore();
 const handleLogin=()=>{
     signInWithEmailAndPassword(getAuth(),email.value,password.value)
     .then((result)=>{
-        console.log(result);
+        console.log(result,"Data");
         setLoginState();
         localStorage.setItem("login",login.value);
          router.push("/home");
