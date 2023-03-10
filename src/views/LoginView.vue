@@ -10,12 +10,12 @@
         <form action="">
             <h2>Sign In</h2>
             <div class="control">
-                <input id="email" required type="email">
+                <input class="field" id="email" required type="email">
                 <label for="email">Email Address</label>
             </div>
 
             <div class="control" >
-                <input id="password" required type="password">
+                <input class="field" id="password" required type="password">
                 <label for="password">Password</label>
             </div>
 
@@ -23,7 +23,7 @@
 
             <div class="formcontainer">
                 <div>
-                    <input type="checkbox" name="" id="remember">
+                    <input  type="checkbox" name="" id="remember">
                     <label for="remember">Remember me</label>
                 </div>
                 <p>Need Help?</p>
@@ -69,8 +69,9 @@
             padding: 1rem;
             border-radius: 0.2rem;
             background-color: #333;
+            margin-bottom: 0.5rem;
             
-            input[type="email"],input[type="password"]{
+            .field{
                 appearance: none;
                 outline: transparent;
                 border-color:transparent;
