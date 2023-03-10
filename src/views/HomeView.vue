@@ -9,6 +9,8 @@
 
 
 <style scoped>
-
+    p{
+        color: white;
+    }
 </style>
 
