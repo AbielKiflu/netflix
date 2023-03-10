@@ -8,18 +8,18 @@
     <article class="formlogin">
         
         <form action="">
-            <h2>Sign In{{ state + "tet" }}</h2>
+            <h2>Sign In </h2>
             <div class="control">
-                <input class="field" id="email" required type="email">
+                <input v-model="email" class="field" id="email" required type="email">
                 <label for="email">Email Address</label>
             </div>
 
             <div class="control" >
-                <input class="field" id="password" required type="password">
+                <input v-model="password" class="field" id="password" required type="password">
                 <label for="password">Password</label>
             </div>
 
-            <ButtonItem text="Sign In"/>
+            <ButtonItem  @click.prevent="handleLogin" text="Sign In"/>
 
             <div class="formcontainer">
                 <div>
@@ -47,12 +47,35 @@
 
 
 <script setup>
-    import {ref} from 'vue';
-    import ButtonItem from "@/components/button/ButtonItem";
+import {ref} from 'vue';
+import ButtonItem from "@/components/button/ButtonItem";
+import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
+import useLoginStore from "@/store/login";
+import { storeToRefs } from 'pinia';
+import { useRouter } from "vue-router";
 
-    const state =ref(process?.env?.VUE_APP_FB_PRO);
+const router=useRouter();
+const email=ref("");
+const password=ref("");
 
-   
+const {login}=storeToRefs(useLoginStore());
+const {setLoginState}=useLoginStore();
+
+const handleLogin=()=>{
+    signInWithEmailAndPassword(getAuth(),email.value,password.value)
+    .then((result)=>{
+        console.log(result);
+        setLoginState();
+        localStorage.setItem("login",login.value);
+         router.push("/home");
+        
+    })
+    .catch((error)=>{
+        console.log("Login failed" + error);
+       
+    });
+     
+}
 
 </script>
 
