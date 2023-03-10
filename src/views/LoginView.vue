@@ -32,6 +32,10 @@
             <div class="formcontainer">
                 <p>New to Netflix? <a href="#"> Sign up now</a>.</p>
             </div>
+
+            <div class="formcontainer">
+                This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+            </div>
  
         </form>
     </article>
@@ -55,7 +59,7 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            background:  rgba(0, 0, 0, 0.67);
+            background:  rgba(0, 0, 0, 0.65);
             margin: auto;
             padding: 2rem;
             max-width: 25rem;
@@ -69,7 +73,7 @@
             padding: 1rem;
             border-radius: 0.2rem;
             background-color: #333;
-            margin-bottom: 0.5rem;
+            margin-bottom: 2rem;
             
             .field{
                 appearance: none;
