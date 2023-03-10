@@ -1,33 +1,97 @@
 <template>
-    <header>
-        <nav class="menu">
-            <img class="menu-logo" :src="require('@/assets/logo.png')" alt="logo">         
-        </nav>
-     <div class="header">
+ 
+<main class="header">
+    <nav class="menu">
+        <img class="menu-logo" :src="require('@/assets/logo.png')" alt="logo">         
+    </nav>
 
-     </div>
-    </header>
-    <Footer/>
+    <article class="formlogin">
+        
+        <form action="">
+            <h2>Sign In</h2>
+            <div class="control">
+                <input id="email" required type="email">
+                <label for="email">Email Address</label>
+            </div>
+
+            <div class="control" >
+                <input id="password" required type="password">
+                <label for="password">Password</label>
+            </div>
+ 
+        </form>
+    </article>
+
+
+</main>
+
 </template>
 
 
 <script setup>
-    import Footer from '@/components/Footer.vue';
+
 </script>
 
 
 <style scoped lang="scss">
-    .menu{
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1rem;
-        width: 100%;
-        background: linear-gradient(black 20%,rgba(0, 0, 0, 0.9) 40%,transparent);
-        .menu-logo{
-            width: 7rem;
+    .formlogin{
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background:  rgba(0, 0, 0, 0.7);
+            margin: auto;
+            padding: 2rem;
+            max-width: 35rem;
         }
+        .control{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 0 1rem;
+            border-radius: 0.2rem;
+            background-color: #333;
+            margin-bottom: 1rem;
+ 
+
+            input[type="email"],input[type="password"]{
+                appearance: none;
+                outline: transparent;
+                border-color:transparent;
+                background-color: #333;
+                line-height:3rem;
+                color: #8c8c8c;
+                margin-top: 0.5rem;
+                
+
+                &:focus + label {
+                    font-size: 0.8rem;
+                    top: 25%;
+                }
+
+                &:valid + label{
+                    font-size: 0.8rem;
+                    top: 25%;
+                }
+                
+ 
+
+            }
+
+            label{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #8c8c8c;
+                transition: font .1s ease,top .1s ease,transform .1s ease;
+            }
+        }
+
+    }
+
+    h2{
+        margin-bottom:1rem;
+      
     }
 
     .header{
@@ -36,16 +100,20 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        height: 60vh;
+ 
+        min-height: 100vh;
         width: 100%;
         color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 1rem;
     }
-
+    .menu{
+        padding: 1rem 1rem;
+        width: 100%;
+        background: linear-gradient(black 20%,rgba(0, 0, 0, 0.9) 40%,transparent);
+        .menu-logo{
+            width: 7rem;
+        }
+    }
 
     @media screen and (min-width: 600px) {
         .menu {
@@ -53,10 +121,11 @@
             width: 10rem;
         }
         }
-        .header{
-            height: 80vh;
-        }
     }
+
+
+
+     
 
 </style>
 
