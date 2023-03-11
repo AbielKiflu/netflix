@@ -39,7 +39,7 @@
  
         </form>
     </article>
-
+   
 
 </main>
 
@@ -53,6 +53,7 @@ import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
 import useLoginStore from "@/store/login";
 import { storeToRefs } from 'pinia';
 import { useRouter } from "vue-router";
+ 
 
 const router=useRouter();
 const email=ref("");
