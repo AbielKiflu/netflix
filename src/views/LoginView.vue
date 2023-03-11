@@ -102,7 +102,7 @@ const handleLogin=()=>{
             justify-content: space-between;
             padding: 1rem;
             border-radius: 0.2rem;
-            background-color: #333;
+            background: #333;
             margin-bottom: 2rem;
             overflow: hidden;
             
