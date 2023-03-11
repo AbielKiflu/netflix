@@ -103,6 +103,7 @@ const handleLogin=()=>{
             border-radius: 0.2rem;
             background-color: #333;
             margin-bottom: 2rem;
+            overflow: hidden;
             
             .field{
                 appearance: none;
@@ -111,7 +112,6 @@ const handleLogin=()=>{
                 background: #333;
                 font-size: 1.1rem;
                 color: #8c8c8c;
-               
                 &:focus + label {
                     font-size: 0.8rem;
                     top: 20%;
