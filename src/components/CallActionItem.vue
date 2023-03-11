@@ -1,24 +1,25 @@
 <template>
-    <div class="wrapper">
+    <form class="wrapper">
         <div class="input-control">
             <input class="field" id="email" required type="email" >
             <label for="email">Email Address</label>
         </div>
         <ButtonItem text="Get Started"/>
-    </div>
+    </form>
 </template>
 
 
 <script setup>
  import ButtonItem from "@/components/button/ButtonItem";
+
 </script>
 
 
 <style scoped lang="scss">
     .wrapper {
         display: flex;
-        flex-wrap: wrap;
-      
+        gap: 0.5rem;
+        
     }
 
     .input-control{
@@ -26,19 +27,30 @@
         color: black;
         appearance: none;
         border: none;
+        outline: 1px solid white;
         margin: auto;
-        height: 3rem;
+        border-radius: 0.2rem;
+        padding: 0.15rem;
         display: flex;
         
+        
+               
         .field {
             appearance: none;
             border: none;
-            outline: transparent;
             padding: .5rem;
+            font-size: 1rem;
+            color: white;
+            border-radius: 0.2rem;
+            background: rgba(0,0,0,0.5);
+            &:focus,&:valid{
+                outline: 1px solid gray;
+            }
 
             &:focus ~ label{
                 top: 20%;
                 font-size: 0.8rem;
+                
              }
 
             &:valid{

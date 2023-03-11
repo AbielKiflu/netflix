@@ -108,7 +108,7 @@ const handleLogin=()=>{
                 appearance: none;
                 outline: transparent;
                 border-color:transparent;
-                background-color: #333;
+                background: #333;
                 font-size: 1.1rem;
                 color: #8c8c8c;
                
