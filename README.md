@@ -1,4 +1,22 @@
-# netflix
+# Project Netflix clone
+
+
+## Technologies used
+1. Vue3 composite api
+2. TMDB api
+3. Firebase
+4. SCSS
+
+##  Feature to be added
+1.Strip payment
+
+
+##  Installation guide
+1. clone from git
+2. create .env file
+3. ....
+
+
 
 ## Project setup
 ```
@@ -14,11 +32,6 @@ yarn serve
 ```
 yarn build
 ```
+ 
+ 
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
