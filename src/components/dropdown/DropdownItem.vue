@@ -3,7 +3,7 @@
         <select name="lang" >
         <option value="En">English</option>
         <option value="Fr">French</option>
-        <option value="Nr">Netherlands</option>
+        <option value="Nr">Dutch</option>
     </select>
     </div>
 </template>
